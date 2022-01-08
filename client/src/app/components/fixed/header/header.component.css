@@ -1,0 +1,8 @@
+.link-active{
+    color: rgb(6, 50, 196);
+}
+
+a{
+    text-transform: uppercase;
+    text-shadow: 0px 0px 1.2px rgba(255, 255, 255, 0.925);
+}

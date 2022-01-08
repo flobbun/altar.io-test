@@ -1,0 +1,53 @@
+#generator{
+    border-radius: 0.5rem;
+    grid-template-rows: 1fr;
+    padding: 1rem;
+}
+
+input, button{
+    border: none; 
+    outline: none;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+}
+
+label{
+    color: var(--gray);
+    font-weight: bold;
+}
+
+input{
+    width: 30%;
+    font-size: 1rem;
+}
+
+input, .cell{
+    transition-duration: 0.6s;
+    cursor: pointer;
+    border: inset 0.1mm rgba(0, 0, 0, 0.151);
+}
+
+.cell:hover{
+    text-shadow: 0 0 2px #000;
+    text-decoration: underline;
+    text-decoration-color: brown;
+}
+
+button{background-color: var(--gray);}
+
+main{
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 7.6vh);
+}
+
+main > .cell{animation: fadeIn 0.8s forwards;}
+.grid img{width: 2.4rem;}
+
+@keyframes fadeIn {
+    from {opacity: 50%;}
+    50% {
+        filter: blur(0.8px);
+        box-shadow: 0 0 1rem 0.2px rgba(0, 0, 0, 0.062);
+    }
+    to {opacity: 100%;}
+}

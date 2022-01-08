@@ -1,0 +1,18 @@
+<section class="grid grid-row-2 fadein" id="generator">
+    <div class="grid grid-row-2 al-items-center grid-column-3">
+        <div class="grid grid-row-2">
+            <label class="txt-uppercase txt-small" for="character">Character</label>
+            <input pattern="[a-z]{1}" maxlength="1" [disabled]="this.blocked" [(ngModel)]="this.character" (keyup)="triggerGenerateGrid()" placeholder="Character" type="text" name="character">
+        </div>
+        <img class="m-auto" src="assets/clock.svg" alt="clock">
+        <button (click)="this.generateGrid()" class="txt-white">GENERATE 2D GRID</button>
+    </div>
+
+    <div>
+        <main class="grid">
+            <div *ngFor="let cell of this.dataBridge.getGrid()" class="cell txt-black txt-center grid al-content-center">{{cell}}</div>
+        </main>
+    
+        <app-code></app-code>
+    </div>
+</section>

@@ -1,0 +1,19 @@
+:root{
+    --gray: #525659;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+input, button, li{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    list-style: none;
+}
+
+.bg-gray{background: var(--gray);}
+.border{border: inset 0.1mm rgba(0, 0, 0, 0.151);}
+

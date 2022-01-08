@@ -1,0 +1,41 @@
+<app-code></app-code>
+
+<section id="payments" class="grid fadein grid-row-2">
+    <form (submit)="this.onSubmit()" [formGroup]="paymentForm">
+        <div class="grid grid-row-2 p-4">
+            <div class="grid grid-column-5 cgap-4">
+                <p>PAYMENT</p>
+                <p>AMOUNT</p>
+            </div>
+    
+            <div class="grid grid-column-5 cgap-4">
+                <input formControlName="name" [class.is-invalid]="this.checkValidation('name')" class="border" placeholder="Payment" type="text"/>
+                <input formControlName="ammount" [class.is-invalid]="this.checkValidation('ammount')" class="border" min="0" placeholder="Ammount" type="number"/>
+                <button class="grid grid-column-3 w50 bg-gray txt-white txt-bold" type="submit">
+                    <img class="w50" src="assets/plus.svg" alt="Add button">
+                    <span>ADD</span>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <div class="grid p-4">
+        <p class="txt-small">PAYMENT LIST</p>
+        <table class="border txt-center">
+            <!--Header-->
+            <tr>
+                <th class="p-8">NAME</th>
+                <th class="p-8">AMOUNT</th>
+                <th class="p-8">CODE</th>
+                <th class="p-8">GRID</th>
+            </tr>
+            <!--Payments--->
+            <tr *ngFor="let payment of this.dataBridge.getPayments()">
+                <td>{{payment.name}}</td>
+                <td>{{payment.ammount}}</td>
+                <td>{{payment.code}}</td>
+                <td>{{payment.grid.length}}</td>
+            </tr>
+        </table>
+    </div>
+</section>

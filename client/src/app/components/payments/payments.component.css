@@ -1,0 +1,20 @@
+img{filter: invert(100%);}
+
+td, th{
+    border-top: outset 0.1mm rgba(0, 0, 0, 0.151);
+    border-left: outset 0.1mm rgba(0, 0, 0, 0.151);
+}
+
+input, button, table{
+    padding: 1rem;
+    border-radius: 0.2rem;
+}
+
+.add-img{
+    position: relative;
+    width: 50%;
+    top: 100%;
+    left: 10%;
+}
+
+.is-invalid{border: 0.1px solid rgba(216, 1, 1, 0.747);}
